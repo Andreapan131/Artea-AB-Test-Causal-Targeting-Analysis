@@ -61,8 +61,6 @@ revenue_after ~ test_coupon + shopping_cart + weeks_since_visit
               + test_coupon:spent_last_purchase + test_coupon:C(channel_acq)
 ```
 
-The interaction terms tell us *which customer traits amplify or shrink the coupon's effect* — this is the heart of the targeting question.
-
 ### Step 3: Uplift Analysis
 
 For each segment defined by a significant interaction (cart status, purchase history bin, acquisition channel), compute the uplift and then build the targeting rule.
