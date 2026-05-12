@@ -1,12 +1,10 @@
 # Artea A/B Test & Causal Targeting Analysis
 
----
 
 ## 📌 Project Purpose
 
 The project aims to solve Artea's low conversion rate (87% of visitors never buy) by using an A/B test and causal analysis to identify which customer segments actually respond to discount coupons, then designing a targeting rule that lifts revenue while avoiding wasted discounts on customers who would have bought anyway. The analysis also assesses whether demographic data should factor into the strategy.
 
----
 
 ## 📊 Dataset Description
 
@@ -43,7 +41,6 @@ A third-party vendor supplied predicted demographic attributes for both datasets
 
 These are predicted by an algorithm, not self-reported — an important caveat for both accuracy and ethics.
 
----
 
 ## 🏷 Methodology
 
@@ -86,7 +83,6 @@ Identified which of the 6,000 future-campaign users met the targeting criteria, 
 
 Re-ran the regression with `test_coupon:minority` and `test_coupon:non_male` interaction terms added, to check whether the targeting strategy should change based on demographic group.
 
----
 
 ## 🔍 Key Findings & Insights
 
@@ -137,7 +133,6 @@ The coupon doesn't work meaningfully differently across demographic groups. Targ
 
 One interesting side note though: Google-acquired users skew much more toward minority customers than Facebook or Instagram do. So a behavior-based rule that excludes Google could still create disparate impact, even though it never touches a demographic variable directly. Worth keeping an eye on.
 
----
 
 ## 📊 Visualizations
 
@@ -152,7 +147,6 @@ All figures are generated in `Artea.ipynb`.
 | 5 | Significance of demographic interaction terms | Both p-values well above 0.05 |
 | 6 | Minority distribution across acquisition channels | Google brings in the most diverse audience |
 
----
 
 ## 🚀 Business Implications
 
@@ -175,7 +169,6 @@ All figures are generated in `Artea.ipynb`.
 
 The most valuable lesson from this project isn't the specific rule. It's the discipline of asking *who the coupon actually changed behavior for* — instead of celebrating an average lift that hides a money-losing reality underneath. Good targeting starts with causal effects, not correlations.
 
----
 
 ## 📁 Repository Structure
 
