@@ -130,26 +130,30 @@ One interesting side note though: Google-acquired users skew much more toward mi
 
 ## 📊 Visualizations
 
-✦ Total & average transactions by group
+### ✦ Total & average transactions by group  
 <img src="transactions_by_group.png" width="600">
+
 - Coupon group has +66 transactions
 
-✦ Total & average revenue by group
+### ✦ Total & average revenue by group  
 <img src="revenue_by_group.png" width="600">
 
-✦ Revenue uplift by segment
+### ✦ Revenue uplift by segment  
 <img src="Revenue_uplift_by_segment.png" width="600">
+
 - Cart-adders (+$1.38) and 1–2 purchase buyers (+$1.28) lead the pack
 
-✦ Avg revenue & transactions by minority / gender
+### ✦ Avg revenue & transactions by minority / gender
 <img src="Avg_revenue_transactions_minority_gender.png" width="600">
 
-✦ Significance of demographic interaction terms
+### ✦ Significance of demographic interaction terms  
 <img src="Significance_of_demographic_interaction_terms.png" width="600">
+
 - Both p-values well above 0.05
 
-✦ Minority distribution across acquisition channels
+### ✦ Minority distribution across acquisition channels
 <img src="Minority_distribution_across_acquisition_channels.png" width="600">
+
 - Google brings in the most diverse audience
 
 ## 🚀 Business Implications
