@@ -44,8 +44,6 @@ These are predicted by an algorithm, not self-reported — an important caveat f
 
 ## 🏷 Methodology
 
-Averages alone don't answer "who should we target," so the analysis layers a regression-driven uplift workflow on top of the basic A/B test.
-
 ### Step 1: EDA Analysis
 
 Started with group means and two-sample t-tests on `trans_after` and `revenue_after` to check whether the coupon had any overall effect.
@@ -89,7 +87,7 @@ Re-ran the regression with `test_coupon:minority` and `test_coupon:non_male` int
 | Avg transactions | 0.126 | 0.152 | **+0.026 (+20.8%)** | 0.027 ✅ |
 | Avg revenue | $7.78 | $7.54 | **−$0.24** | 0.718 ❌ |
 
-The coupon clearly drove **more purchases** — that part is real. But the 20% discount ate into the average ticket size, so revenue actually fell slightly (and the difference isn't statistically significant in either direction). Sending coupons to everyone is a losing trade.
+The coupon clearly drove **more purchases**, but the 20% discount reduced the average revenue per purchase, so total revenue actually fell slightly (though the difference isn't statistically significant in either direction). Sending coupons to everyone risks eroding margins without a clear revenue gain.
 
 ### ❷ Three interactions reveal where the coupon actually pays off
 
@@ -137,12 +135,22 @@ All figures are generated in `Artea.ipynb`.
 | # | Figure | What it shows |
 |---|---|---|
 | 1 | Total & average transactions by group | Coupon group has +66 transactions — lift is real |
-| 2 | Total & average revenue by group | Revenue is flat-to-down despite more transactions |
-| 3 | Revenue uplift by segment | Cart-adders (+$1.38) and 1–2 purchase buyers (+$1.28) lead the pack |
-| 4 | Avg revenue & transactions by minority / gender | Visual check on demographic differences |
-| 5 | Significance of demographic interaction terms | Both p-values well above 0.05 |
-| 6 | Minority distribution across acquisition channels | Google brings in the most diverse audience |
+<img src=".png" width="600">
 
+| 2 | Total & average revenue by group | Revenue is flat-to-down despite more transactions |
+<img src=".png" width="600">
+
+| 3 | Revenue uplift by segment | Cart-adders (+$1.38) and 1–2 purchase buyers (+$1.28) lead the pack |
+<img src=".png" width="600">
+
+| 4 | Avg revenue & transactions by minority / gender | Visual check on demographic differences |
+<img src=".png" width="600">
+
+| 5 | Significance of demographic interaction terms | Both p-values well above 0.05 |
+<img src=".png" width="600">
+
+| 6 | Minority distribution across acquisition channels | Google brings in the most diverse audience |
+<img src=".png" width="600">
 
 ## 🚀 Business Implications
 
