@@ -131,12 +131,12 @@ One interesting side note though: Google-acquired users skew much more toward mi
 ## 📊 Visualizations
 
 ### ✦ Total & average transactions by group  
-<img src="transactions_by_group.png" width="600">
+<img src="transactions_by_group.png" width="700">
 
 - Coupon group has +66 transactions
 
 ### ✦ Total & average revenue by group  
-<img src="revenue_by_group.png" width="600">
+<img src="revenue_by_group.png" width="700">
 
 ### ✦ Revenue uplift by segment  
 <img src="Revenue_uplift_by_segment.png" width="600">
@@ -147,9 +147,7 @@ One interesting side note though: Google-acquired users skew much more toward mi
 <img src="Avg_revenue_transactions_minority_gender.png" width="600">
 
 ### ✦ Significance of demographic interaction terms  
-<img src="Significance_of_demographic_interaction_terms.png" width="600">
-
-- Both p-values well above 0.05
+<img src="Significance_of_demographic_interaction_terms.png" width="400">
 
 ### ✦ Minority distribution across acquisition channels
 <img src="Minority_distribution_across_acquisition_channels.png" width="600">
