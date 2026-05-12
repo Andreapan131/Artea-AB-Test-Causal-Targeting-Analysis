@@ -147,7 +147,7 @@ One interesting side note though: Google-acquired users skew much more toward mi
 <img src="Avg_revenue_transactions_minority_gender.png" width="600">
 
 ### ✦ Significance of demographic interaction terms  
-<img src="Significance_of_demographic_interaction_terms.png" width="400">
+<img src="Significance_of_demographic_interaction_terms.png" width="500">
 
 ### ✦ Minority distribution across acquisition channels
 <img src="Minority_distribution_across_acquisition_channels.png" width="600">
