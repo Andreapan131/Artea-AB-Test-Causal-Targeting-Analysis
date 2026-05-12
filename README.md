@@ -46,11 +46,11 @@ These are predicted by an algorithm, not self-reported — an important caveat f
 
 Averages alone don't answer "who should we target," so the analysis layers a regression-driven uplift workflow on top of the basic A/B test.
 
-### Step 1️⃣ — Validate the experiment
+### Step 1: Validate the experiment
 
 Started with group means and two-sample t-tests on `trans_after` and `revenue_after` to check whether the coupon had any overall effect.
 
-### Step 2️⃣ — Find heterogeneous effects with interaction terms
+### Step 2: Find heterogeneous effects with interaction terms
 
 Ran an OLS regression of revenue on customer features **plus interaction terms** between `test_coupon` and each feature:
 
@@ -65,21 +65,21 @@ revenue_after ~ test_coupon + shopping_cart + weeks_since_visit
 
 The interaction terms tell us *which customer traits amplify or shrink the coupon's effect* — this is the heart of the targeting question.
 
-### Step 3️⃣ — Compute uplift by segment
+### Step 3: Compute uplift by segment
 
 For each segment defined by a significant interaction (cart status, purchase history bin, acquisition channel), computed:
 
 > **Uplift = Avg(Treatment) − Avg(Control)** — calculated for both transactions and revenue.
 
-### Step 4️⃣ — Pick segments that win on both metrics
+### Step 4: Pick segments that win on both metrics
 
 A segment only made the cut if the coupon increased transactions *and* didn't burn revenue.
 
-### Step 5️⃣ — Apply the rule to `Next_Campaign`
+### Step 5: Apply the rule to `Next_Campaign`
 
 Identified which of the 6,000 future-campaign users met the targeting criteria, then estimated incremental transactions and revenue using the uplift values from the AB test.
 
-### Step 6️⃣ — Test demographics separately
+### Step 6: Test demographics separately
 
 Re-ran the regression with `test_coupon:minority` and `test_coupon:non_male` interaction terms added, to check whether the targeting strategy should change based on demographic group.
 
